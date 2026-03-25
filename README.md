@@ -1,111 +1,74 @@
-Animación por Frames en Blender (2D)
-Proyecto: Animación simple de un león en 8 frames
+Animación 2D por Frames (8 Frames) en Blender
 Introducción
 
-La animación por frames en 2D consiste en definir manualmente una serie de imágenes consecutivas que representan diferentes estados de un objeto, generando la ilusión de movimiento al reproducirse en secuencia.
+En esta práctica se realiza una animación 2D por frames en Blender utilizando un personaje tipo león. La animación consta de 8 frames, donde cada uno representa un cambio manual en la posición del modelo para simular movimiento (caminar).
+referencia:
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1f2d942f-e358-4495-a49a-3d961bd5ea4f" />
 
-En este proyecto se desarrolla una animación simple de un león en Blender, utilizando únicamente 8 frames, lo que corresponde a una animación básica tipo ciclo corto.
+Vista del proyecto
 
-Objetivo
+Configuración inicial
+Abrir Blender.
+Cargar el archivo .blend del león.
+Ir al espacio de trabajo 2D Animation.
+Configurar la línea de tiempo:
+Start: 1
+End: 8
+Proceso de animación (8 Frames)
+Frame 1 (posición inicial)
+El león está en reposo.
+Todas las patas alineadas.
 
-Crear una animación 2D básica del movimiento de un león utilizando 8 frames, aplicando keyframes manuales dentro del entorno de Blender.
+Frame 2 (inicio de movimiento)
+Se adelanta la pata delantera.
+Ligero movimiento de cabeza.
 
-1. Entorno de trabajo
+Frame 3 (avance)
+El cuerpo se desplaza ligeramente hacia adelante.
+La pata trasera comienza a levantarse.
 
-El proyecto se desarrolla en el espacio de trabajo 2D Animation de Blender, donde se utiliza una cámara fija y un modelo estilizado del león.
+Frame 4 (paso medio)
+La pata delantera está más extendida.
+El cuerpo baja ligeramente.
 
-Descripción técnica
-Vista: Cámara en perspectiva
-Tipo: Animación 2D
-Objeto principal: León
-Fondo: Color sólido
-Timeline activa
-2. Configuración de la animación
-Procedimiento
-Ir a la Timeline (parte inferior)
-Configurar:
-Frame inicial: 1
-Frame final: 8
-Ajustar FPS:
-12 fps (recomendado para animación simple)
-o 24 fps si se desea mayor fluidez
-3. Activación de keyframes
-Procedimiento
-Activar el botón de Auto Keyframe (círculo rojo)
-Esto permite registrar automáticamente los cambios realizados en cada frame
-4. Desarrollo de la animación (8 frames)
+Frame 5 (continuación del paso)
+Se alterna el movimiento de patas.
+El cuerpo avanza.
 
-Dado que solo se utilizan 8 frames, cada uno representa un cambio significativo en el movimiento.
+Frame 6 (segunda fase)
+La otra pata delantera avanza.
+Movimiento leve de cola.
 
-Estructura de animación
-Frame	Acción
-1	Posición inicial
-2	Movimiento leve de patas
-3	Avance del cuerpo
-4	Cambio de patas delanteras
-5	Extensión del movimiento
-6	Apoyo contrario
-7	Preparación de cierre
-8	Regreso a posición inicial
-5. Procedimiento paso a paso
-Frame 1
-Seleccionar el león
-Posición inicial (reposo)
+Frame 7 (cierre del ciclo)
+El cuerpo vuelve a estabilizarse.
+Preparación para volver al frame 1.
+
+Frame 8 (posición final)
+Similar al frame 1 para crear loop.
+Permite animación continua.
+
+Cómo insertar keyframes en Blender
+
+Para cada frame:
+
+Posicionarse en el frame (1–8).
+Seleccionar el objeto o hueso del león.
 Presionar:
-I → Location / Rotation
-Frame 2
-Mover ligeramente:
-Una pata
-Cabeza
-Insertar keyframe
-Frame 3
-Desplazar el cuerpo hacia adelante
-Ajustar patas traseras
-Insertar keyframe
-Frame 4
-Cambiar apoyo de patas delanteras
-Ajustar equilibrio del cuerpo
-Insertar keyframe
-Frame 5–7
-Continuar alternando movimiento de patas
-Mantener coherencia del ciclo
-Insertar keyframes en cada frame
-Frame 8
-Regresar a posición similar al Frame 1
-Esto permite que la animación sea cíclica
-6. Edición de animación
-Uso del Dope Sheet
-Cambiar vista a:
-Dope Sheet → Action Editor
-Verificar:
-Que existan keyframes en los 8 frames
-Ajustar tiempos si es necesario
-7. Configuración de render
-Procedimiento
+I → Location
+
+O si usas rig:
+
+I → LocRotScale
+Reproducción
+Presionar barra espaciadora
+Verificar fluidez del movimiento
+Renderizado
 Ir a Output Properties
 Configurar:
-Formato: MPEG-4
-Codec: H.264
-Seleccionar carpeta de salida
-8. Renderizado
-Procedimiento
-Ir a:
+Formato: FFmpeg Video
+Resolución: 1920x1080
 Render → Render Animation
-Blender generará la animación completa (8 frames)
+<img width="1098" height="709" alt="image" src="https://github.com/user-attachments/assets/98e5a9cf-83d0-4c7b-8b75-3d3671b7674f" />
 Conclusión
 
-La animación por frames en 2D con una cantidad reducida de frames permite comprender los principios básicos del movimiento, como la secuencia, el ritmo y la repetición. Aunque se trata de una animación simple, el correcto uso de keyframes y la organización del timeline permiten obtener resultados funcionales y reutilizables.
-
-Estructura recomendada para GitHub
-animacion-leon-2d
-│
-├── README.md
-├── imagenes/
-│   └── leon_base.png
-├── leon.blend
-└── render.mp4
-Recomendaciones técnicas
-Mantener consistencia entre frame 1 y 8 (loop)
-Exagerar movimientos en pocos frames para mejor visibilidad
-Trabajar primero en poses clave (key poses)
-Usar interpolación lineal si se desea estilo más “frame a frame”
+La animación por frames permite controlar completamente cada movimiento del personaje. Con solo 8 frames se logra una animación simple tipo ciclo de caminata, ideal para prácticas iniciales en Blender.
